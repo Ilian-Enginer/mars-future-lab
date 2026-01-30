@@ -1,7 +1,7 @@
-/* Основен фон на сайта */
+/* Основен фон */
 body {
   font-family: Arial, sans-serif;
-  background-color: #1B1B1B; /* тъмносив */
+  background-color: #1B1B1B; 
   color: #fff;
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body {
 
 /* Хедър */
 .header-bg {
-  background-color: #B22222; /* тъмночервено */
+  background-color: #B22222;
   padding: 50px 0;
   text-align: center;
   position: sticky;
@@ -27,18 +27,13 @@ body {
   animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-@keyframes blink {
-  50% { border-color: transparent; }
-}
+@keyframes typing { from { width: 0; } to { width: 100%; } }
+@keyframes blink { 50% { border-color: transparent; } }
 
 .header-bar {
   width: 120px;
   height: 6px;
-  background-color: #FF8C00; /* по-меко оранжево */
+  background-color: #FF8C00;
   margin: 10px auto;
   border-radius: 3px;
 }
@@ -55,7 +50,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #FFD700; /* златно */
+  color: #FFD700;
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 8px;
@@ -65,11 +60,11 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
   background-color: #FFD700;
-  color: #B22222; /* тъмночервено при hover */
+  color: #B22222;
   transform: scale(1.2);
 }
 
-/* Секции – редуване текст/снимка */
+/* Секции редуващи се текст/снимка */
 .split-section {
   display: flex;
   align-items: center;
@@ -81,36 +76,15 @@ nav ul li a.active {
   transition: 1s ease;
 }
 
-.split-section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+.split-section.show { opacity: 1; transform: translateY(0); }
+.split-section.reverse { flex-direction: row-reverse; }
 
-.split-section.reverse {
-  flex-direction: row-reverse;
-}
+.split-section:nth-child(odd) { background-color: #2C2C2C; }
+.split-section:nth-child(even) { background-color: #3D1F1F; }
 
-.split-section:nth-child(odd) {
-  background-color: #2C2C2C; /* тъмносив */
-}
-
-.split-section:nth-child(even) {
-  background-color: #3D1F1F; /* тъмночервено-кафяво */
-}
-
-.text-left, .text-right {
-  width: 50%;
-}
-
-.text-left h2, .text-right h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.text-left p, .text-right p {
-  font-size: 1.2em;
-  line-height: 1.6;
-}
+.text-left, .text-right { width: 50%; }
+.text-left h2, .text-right h2 { font-size: 2.5em; margin-bottom: 20px; }
+.text-left p, .text-right p { font-size: 1.2em; line-height: 1.6; }
 
 /* Снимки */
 .split-section img {
@@ -118,10 +92,23 @@ nav ul li a.active {
   border-radius: 15px;
   transition: transform 0.5s;
 }
+.split-section img:hover { transform: scale(1.05) rotate(2deg); }
 
-.split-section img:hover {
-  transform: scale(1.05) rotate(2deg);
+/* Мини игра - бутон */
+#launch {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #FFD700;
+  color: #B22222;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
+#launch:hover { transform: scale(1.1); background-color: #FF8C00; }
+
+/* Ракета */
+#rocket { transition: bottom 2s ease-out; }
 
 /* Футър */
 footer {
