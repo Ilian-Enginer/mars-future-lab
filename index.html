@@ -156,14 +156,20 @@
 
 <script>
 function showSection(id) {
-  document.querySelectorAll('.section').forEach(s => {
-    s.style.display = 'none';
-  });
-  document.getElementById(id).style.display = 'block';
+  // Премахваме активния клас от всички секции
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+
+  // Добавяме активен клас на избраната секция
+  const section = document.getElementById(id);
+  section.classList.add('active');
+
+  // Скролваме до секцията плавно (по желание)
+  section.scrollIntoView({ behavior: 'smooth' });
 }
 
+// Ако искаш, при първо зареждане да се показват само бутоните и нищо друго
 document.addEventListener("DOMContentLoaded", () => {
-  showSection('science');
+  // нищо не показваме по подразбиране
 });
 </script>
 
