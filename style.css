@@ -131,3 +131,23 @@ footer {
     width: 100%;
   }
 }
+
+<script>
+function showSection(id) {
+  // Скриваме всички секции
+  document.querySelectorAll('.section').forEach(s => {
+    s.classList.remove('active');
+  });
+
+  // Показваме само избраната секция
+  const section = document.getElementById(id);
+  section.classList.add('active');
+}
+
+// При зареждане на страницата - не показваме нищо
+document.addEventListener("DOMContentLoaded", () => {
+  // Нищо не показваме автоматично
+});
+</script>
+</body>
+
