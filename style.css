@@ -92,4 +92,35 @@ main section {
   box-shadow: 0 0 25px rgba(0,0,0,0.4);
 }
 
-/* ===== BUTTON ====*
+/* ===== BUTTON ===== */
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background: #ffcc00;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #ffd633;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .split-section,
+  .split-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+}
