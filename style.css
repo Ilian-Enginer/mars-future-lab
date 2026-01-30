@@ -1,7 +1,7 @@
 /* Основен фон на сайта */
 body {
   font-family: Arial, sans-serif;
-  background-color: #FF7518;
+  background-color: #1B1B1B; /* тъмносив */
   color: #fff;
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body {
 
 /* Хедър */
 .header-bg {
-  background-color: #FF4500;
+  background-color: #B22222; /* тъмночервено */
   padding: 50px 0;
   text-align: center;
   position: sticky;
@@ -38,7 +38,7 @@ body {
 .header-bar {
   width: 120px;
   height: 6px;
-  background-color: #FFA500;
+  background-color: #FF8C00; /* по-меко оранжево */
   margin: 10px auto;
   border-radius: 3px;
 }
@@ -55,7 +55,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #FFD700;
+  color: #FFD700; /* златно */
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 8px;
@@ -65,7 +65,7 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
   background-color: #FFD700;
-  color: #FF4500;
+  color: #B22222; /* тъмночервено при hover */
   transform: scale(1.2);
 }
 
@@ -88,6 +88,14 @@ nav ul li a.active {
 
 .split-section.reverse {
   flex-direction: row-reverse;
+}
+
+.split-section:nth-child(odd) {
+  background-color: #2C2C2C; /* тъмносив */
+}
+
+.split-section:nth-child(even) {
+  background-color: #3D1F1F; /* тъмночервено-кафяво */
 }
 
 .text-left, .text-right {
@@ -117,7 +125,7 @@ nav ul li a.active {
 
 /* Футър */
 footer {
-  background: linear-gradient(90deg, #CC5500, #FF4500);
+  background: linear-gradient(90deg, #3D1F1F, #B22222);
   text-align: center;
   padding: 20px;
   color: #fff;
