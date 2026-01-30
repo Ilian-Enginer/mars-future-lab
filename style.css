@@ -40,7 +40,7 @@ nav button {
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.25s;
 }
 
 nav button:hover {
@@ -50,24 +50,24 @@ nav button:hover {
 
 /* ===== SECTIONS ===== */
 .section {
+  display: none; /* секциите по подразбиране са скрити */
   max-width: 1100px;
   margin: 40px auto;
   background: rgba(0,0,0,0.18);
   border-radius: 18px;
   padding: 50px;
 
-  /* за анимация при показване */
+  /* анимация за slide-in */
   opacity: 0;
-  max-height: 0;       /* вместо display:none */
-  overflow: hidden;
-  transform: translateX(50px);
+  transform: translateX(50px); /* отдясно леко */
   transition: all 0.5s ease;
 }
 
+/* активна секция с плавно показване */
 .section.active {
+  display: block;
   opacity: 1;
-  max-height: 2000px; /* достатъчно голяма височина за съдържанието */
-  transform: translateX(0);
+  transform: translateX(0); /* на място */
 }
 
 /* ===== CONTENT LAYOUT ===== */
@@ -105,12 +105,10 @@ nav button:hover {
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .action:hover {
   background: #33ffe0;
-  transform: translateY(-2px);
 }
 
 /* ===== FOOTER ===== */
@@ -131,23 +129,3 @@ footer {
     width: 100%;
   }
 }
-
-<script>
-function showSection(id) {
-  // Скриваме всички секции
-  document.querySelectorAll('.section').forEach(s => {
-    s.classList.remove('active');
-  });
-
-  // Показваме само избраната секция
-  const section = document.getElementById(id);
-  section.classList.add('active');
-}
-
-// При зареждане на страницата - не показваме нищо
-document.addEventListener("DOMContentLoaded", () => {
-  // Нищо не показваме автоматично
-});
-</script>
-</body>
-
