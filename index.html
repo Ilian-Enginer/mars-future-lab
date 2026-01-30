@@ -7,166 +7,116 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <div class="container">
 
-    <h1> Mars Future Lab</h1>
+<header class="header">
+  <h1 class="typing">🚀 Mars Future Lab</h1>
 
-    <nav>
-      <ul>
-        <li><a href="#science">Наука</a></li>
-        <li><a href="#tech">Технологии</a></li>
-        <li><a href="#math">Математика</a></li>
-        <li><a href="#model">Нашият модел</a></li>
-        <li><a href="#game">Игра</a></li>
-        <li><a href="#about">За нас</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <button onclick="showSection('science')">Наука</button>
+    <button onclick="showSection('technology')">Технологии</button>
+    <button onclick="showSection('math')">Математика</button>
+    <button onclick="showSection('model')">Нашият модел</button>
+    <button onclick="showSection('game')">Игра</button>
+    <button onclick="showSection('about')">За нас</button>
+  </nav>
+</header>
 
-    <section id="science">
-      <h2>🧪 Наука</h2>
+<main>
+
+<section id="science" class="section">
+  <div class="content">
+    <img src="science.jpg">
+    <div>
+      <h2>🌪 Наука</h2>
       <p>
-        Марс е червен, прашен и супер интересен!
+        Марс е сурова планета с прашни бури, тънка атмосфера и екстремни температури.
+        Изследваме как хората могат да оцелеят и да се адаптират към тези условия.
       </p>
-      <img src="mars_header.jpg.webp" alt="Mars duststorm">
-    </section>
-
-    <footer>
-      © 2026 Mars Future Lab
-    </footer>
-
-  </div>
-</body>
-  
-  <!-- Хедър -->
-  <header>
-    <div class="header-bg">
-      <h1 class="typing">🚀 Mars Future Lab</h1>
-      <nav>
-        <ul>
-          <li><a href="#" onclick="showSection('science')">Наука</a></li>
-          <li><a href="#" onclick="showSection('technology')">Технологии</a></li>
-          <li><a href="#" onclick="showSection('math')">Математика</a></li>
-          <li><a href="#" onclick="showSection('model')">Нашият модел</a></li>
-          <li><a href="#" onclick="showSection('game')">Игра</a></li>
-          <li><a href="#" onclick="showSection('about')">За нас</a></li>
-        </ul>
-      </nav>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- Основно съдържание -->
-  <main>
-    <!-- Наука -->
-    <section id="science" class="split-section">
-      <div class="text-left">
-        <h2>🌪 Наука</h2>
-        <p>Марс е червен, прашен и супер интересен! 🌌  
-        Представи си да гледаш прашна буря от прозореца на твоята колония – невероятно, нали? 🪐  
-        Тук ще разбереш какво прави Марс толкова специален!</p>
-      </div>
-      <div class="image-right">
-        <img src="mars-duststorm.jpg" alt="Mars duststorm">
-      </div>
-    </section>
+<section id="technology" class="section">
+  <div class="content">
+    <img src="tech.jpg">
+    <div>
+      <h2>🤖 Технологии</h2>
+      <p>
+        Роботи, дронове и машини произвеждат кислород от CO₂ и помагат при строежа
+        на първите марсиански колонии.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <!-- Технологии -->
-    <section id="technology" class="split-section reverse">
-      <div class="image-left">
-        <img src="mars-robot.jpg" alt="Mars robot">
-      </div>
-      <div class="text-right">
-        <h2>🤖 Технологии</h2>
-        <p>Роботи и дронове строят колонията за нас! 🤩  
-        Искаш ли да видиш как се добива кислород от CO₂? 🌬️  
-        Технологиите на Марс са като научна магия!</p>
-      </div>
-    </section>
+<section id="math" class="section">
+  <div class="content">
+    <img src="math.jpg">
+    <div>
+      <h2>📊 Математика</h2>
+      <p>
+        С математика изчисляваме храна, вода, кислород и енергия,
+        нужни за оцеляване на хората на Марс.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <!-- Математика -->
-    <section id="math" class="split-section">
-      <div class="text-left">
-        <h2>📊 Математика</h2>
-        <p>Планиране на колонията = забавни числа и графики! 📈  
-        Колко вода ни трябва, колко храна? 🍎  
-        Изчисленията ни гарантират, че никой няма да гладува на Марс!</p>
-      </div>
-      <div class="image-right">
-        <img src="mars-math.jpg" alt="Mars calculation">
-      </div>
-    </section>
+<section id="model" class="section">
+  <div class="content">
+    <img src="model.jpg">
+    <div>
+      <h2>🛰 Нашият модел</h2>
+      <p>
+        Това е нашата идея за бъдеща марсианска колония – куполи,
+        соларни панели и защитени зони.
+      </p>
+    </div>
+  </div>
+</section>
 
-    <!-- Нашият модел -->
-    <section id="model" class="split-section reverse">
-      <div class="image-left">
-        <iframe title="Mars 3D Model" frameborder="0" allowfullscreen
-          src="https://sketchfab.com/models/7w7f3b6b3/embed"
-          width="100%" height="400px">
-        </iframe>
-      </div>
-      <div class="text-right">
-        <h2>🛰️ Нашият модел</h2>
-        <p>Виж нашата 3D колония на Марс – можеш да я въртиш и разглеждаш отвсякъде!</p>
-      </div>
-    </section>
+<section id="game" class="section">
+  <div class="content">
+    <img src="game.jpg">
+    <div>
+      <h2>🎮 Игра</h2>
+      <p>Малка интерактивна идея: представи си, че управляваш мисия до Марс!</p>
+      <button class="action">СТАРТ НА МИСИЯ</button>
+    </div>
+  </div>
+</section>
 
-    <!-- Игра -->
-    <section id="game" class="split-section">
-      <div class="text-left">
-        <h2>🚀 Игра: Изстреляй ракета!</h2>
-        <p>Натисни бутона и виж как твоята ракета лети към Марс! 🌌</p>
-        <button id="launch">🚀 Изстреляй ракета</button>
-      </div>
-      <div class="image-right">
-        <img src="rocket.png" id="rocket" style="position:absolute; bottom:0; left:50%; display:none; width:80px;">
-      </div>
-    </section>
+<section id="about" class="section">
+  <div class="content">
+    <img src="team.jpg">
+    <div>
+      <h2>🌌 За нас</h2>
+      <p>
+        Ние сме двама ученици от Шумен, СУ „Сава Доброплодни“.
+        Обичаме технологии, информатика и мечтаем за бъдещето на Марс 🚀
+      </p>
+    </div>
+  </div>
+</section>
 
-    <!-- За нас -->
-    <section id="about" class="split-section reverse">
-      <div class="text-left">
-        <h2>🌌 За нас</h2>
-        <p>Ние сме двама приятели на 13 години от Шумен, ученици в СУ „Сава Доброплодни“.  
-        Обичаме информатика и технологии и мечтаем за колонии на Марс! 🚀</p>
-      </div>
-      <div class="image-right">
-        <img src="team.jpg" alt="Team">
-      </div>
-    </section>
-  </main>
+</main>
 
-  <!-- Футър -->
-  <footer>
-    <p>© 2026 Mars Future Lab</p>
-  </footer>
+<footer>
+  © 2026 Mars Future Lab
+</footer>
 
-  <!-- Скриптове -->
-  <script>
-    // Функция за показване на избрана секция
-    function showSection(id) {
-      const sections = document.querySelectorAll('main section');
-      sections.forEach(sec => sec.style.display = 'none'); // скрива всички
-      document.getElementById(id).style.display = 'flex'; // показва избраната
-    }
+<script>
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => {
+    s.style.display = 'none';
+  });
+  document.getElementById(id).style.display = 'block';
+}
 
-    // По начало показваме първата секция
-    document.addEventListener('DOMContentLoaded', () => {
-      showSection('science');
-    });
-
-    // Мини игра - ракета
-    const launchBtn = document.getElementById("launch");
-    const rocket = document.getElementById("rocket");
-
-    launchBtn.addEventListener("click", () => {
-      rocket.style.display = "block";
-      rocket.style.transition = "bottom 2s ease-out";
-      rocket.style.bottom = "100%";
-      setTimeout(() => {
-        rocket.style.bottom = "0";
-        rocket.style.display = "none";
-      }, 2500);
-    });
-  </script>
+document.addEventListener("DOMContentLoaded", () => {
+  showSection('science');
+});
+</script>
 
 </body>
 </html>
