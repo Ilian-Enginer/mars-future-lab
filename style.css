@@ -8,6 +8,65 @@
 </head>
 <body>
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #ff8c33, #ff6a00);
+  color: white;
+}
+
+/* Основен контейнер */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Заглавие */
+h1 {
+  font-size: 42px;
+}
+
+/* Навигация */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Секции */
+section {
+  margin-top: 40px;
+  background: rgba(0,0,0,0.15);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Снимка */
+img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0.8;
+}
+
   <!-- Хедър -->
   <header>
     <div class="header-bg">
