@@ -1,119 +1,144 @@
-/* Основен фон */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #1B1B1B; 
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mars Future Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-/* Хедър */
-.header-bg {
-  background-color: #B22222;
-  padding: 50px 0;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+  <!-- Хедър -->
+  <header>
+    <div class="header-bg">
+      <h1 class="typing">🚀 Mars Future Lab</h1>
+      <div class="header-bar"></div>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="showSection('science')">Наука</a></li>
+          <li><a href="#" onclick="showSection('technology')">Технологии</a></li>
+          <li><a href="#" onclick="showSection('math')">Математика</a></li>
+          <li><a href="#" onclick="showSection('model')">Нашият модел</a></li>
+          <li><a href="#" onclick="showSection('game')">Игра</a></li>
+          <li><a href="#" onclick="showSection('about')">За нас</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-.header-bg h1 {
-  margin: 0;
-  font-size: 3em;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 4px solid #FFD700;
-  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
-}
+  <!-- Основно съдържание -->
+  <main>
+    <!-- Наука -->
+    <section id="science" class="split-section">
+      <div class="text-left">
+        <h2>🌪 Наука</h2>
+        <p>Марс е червен, прашен и супер интересен! 🌌  
+        Представи си да гледаш прашна буря от прозореца на твоята колония – невероятно, нали? 🪐  
+        Тук ще разбереш какво прави Марс толкова специален!</p>
+      </div>
+      <div class="image-right">
+        <img src="mars-duststorm.jpg" alt="Mars duststorm">
+      </div>
+    </section>
 
-@keyframes typing { from { width: 0; } to { width: 100%; } }
-@keyframes blink { 50% { border-color: transparent; } }
+    <!-- Технологии -->
+    <section id="technology" class="split-section reverse">
+      <div class="image-left">
+        <img src="mars-robot.jpg" alt="Mars robot">
+      </div>
+      <div class="text-right">
+        <h2>🤖 Технологии</h2>
+        <p>Роботи и дронове строят колонията за нас! 🤩  
+        Искаш ли да видиш как се добива кислород от CO₂? 🌬️  
+        Технологиите на Марс са като научна магия!</p>
+      </div>
+    </section>
 
-.header-bar {
-  width: 120px;
-  height: 6px;
-  background-color: #FF8C00;
-  margin: 10px auto;
-  border-radius: 3px;
-}
+    <!-- Математика -->
+    <section id="math" class="split-section">
+      <div class="text-left">
+        <h2>📊 Математика</h2>
+        <p>Планиране на колонията = забавни числа и графики! 📈  
+        Колко вода ни трябва, колко храна? 🍎  
+        Изчисленията ни гарантират, че никой няма да гладува на Марс!</p>
+      </div>
+      <div class="image-right">
+        <img src="mars-math.jpg" alt="Mars calculation">
+      </div>
+    </section>
 
-/* Навигация */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
+    <!-- Нашият модел -->
+    <section id="model" class="split-section reverse">
+      <div class="image-left">
+        <iframe title="Mars 3D Model" frameborder="0" allowfullscreen
+          src="https://sketchfab.com/models/7w7f3b6b3/embed"
+          width="100%" height="400px">
+        </iframe>
+      </div>
+      <div class="text-right">
+        <h2>🛰️ Нашият модел</h2>
+        <p>Виж нашата 3D колония на Марс – можеш да я въртиш и разглеждаш отвсякъде!</p>
+      </div>
+    </section>
 
-nav ul li a {
-  text-decoration: none;
-  color: #FFD700;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
+    <!-- Игра -->
+    <section id="game" class="split-section">
+      <div class="text-left">
+        <h2>🚀 Игра: Изстреляй ракета!</h2>
+        <p>Натисни бутона и виж как твоята ракета лети към Марс! 🌌</p>
+        <button id="launch">🚀 Изстреляй ракета</button>
+      </div>
+      <div class="image-right">
+        <img src="rocket.png" id="rocket" style="position:absolute; bottom:0; left:50%; display:none; width:80px;">
+      </div>
+    </section>
 
-nav ul li a:hover,
-nav ul li a.active {
-  background-color: #FFD700;
-  color: #B22222;
-  transform: scale(1.2);
-}
+    <!-- За нас -->
+    <section id="about" class="split-section reverse">
+      <div class="text-left">
+        <h2>🌌 За нас</h2>
+        <p>Ние сме двама приятели на 13 години от Шумен, ученици в СУ „Сава Доброплодни“.  
+        Обичаме информатика и технологии и мечтаем за колонии на Марс! 🚀</p>
+      </div>
+      <div class="image-right">
+        <img src="team.jpg" alt="Team">
+      </div>
+    </section>
+  </main>
 
-/* Секции редуващи се текст/снимка */
-.split-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 10%;
-  gap: 20px;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 1s ease;
-}
+  <!-- Футър -->
+  <footer>
+    <p>© 2026 Mars Future Lab</p>
+  </footer>
 
-.split-section.show { opacity: 1; transform: translateY(0); }
-.split-section.reverse { flex-direction: row-reverse; }
+  <!-- Скриптове -->
+  <script>
+    // Функция за показване на избрана секция
+    function showSection(id) {
+      const sections = document.querySelectorAll('main section');
+      sections.forEach(sec => sec.style.display = 'none'); // скрива всички
+      document.getElementById(id).style.display = 'flex'; // показва избраната
+    }
 
-.split-section:nth-child(odd) { background-color: #2C2C2C; }
-.split-section:nth-child(even) { background-color: #3D1F1F; }
+    // По начало показваме първата секция
+    document.addEventListener('DOMContentLoaded', () => {
+      showSection('science');
+    });
 
-.text-left, .text-right { width: 50%; }
-.text-left h2, .text-right h2 { font-size: 2.5em; margin-bottom: 20px; }
-.text-left p, .text-right p { font-size: 1.2em; line-height: 1.6; }
+    // Мини игра - ракета
+    const launchBtn = document.getElementById("launch");
+    const rocket = document.getElementById("rocket");
 
-/* Снимки */
-.split-section img {
-  width: 45%;
-  border-radius: 15px;
-  transition: transform 0.5s;
-}
-.split-section img:hover { transform: scale(1.05) rotate(2deg); }
+    launchBtn.addEventListener("click", () => {
+      rocket.style.display = "block";
+      rocket.style.transition = "bottom 2s ease-out";
+      rocket.style.bottom = "100%";
+      setTimeout(() => {
+        rocket.style.bottom = "0";
+        rocket.style.display = "none";
+      }, 2500);
+    });
+  </script>
 
-/* Мини игра - бутон */
-#launch {
-  padding: 10px 20px;
-  font-size: 1.2em;
-  background-color: #FFD700;
-  color: #B22222;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-#launch:hover { transform: scale(1.1); background-color: #FF8C00; }
-
-/* Ракета */
-#rocket { transition: bottom 2s ease-out; }
-
-/* Футър */
-footer {
-  background: linear-gradient(90deg, #3D1F1F, #B22222);
-  text-align: center;
-  padding: 20px;
-  color: #fff;
-}
+</body>
+</html>
