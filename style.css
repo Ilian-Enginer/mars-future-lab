@@ -77,14 +77,6 @@ section:nth-child(even) {
   background-color: #FF9933; /* различен нюанс за редуване */
 }
 
-/* Футър */
-footer {
-  background: linear-gradient(90deg, #CC5500, #FF4500);
-  text-align: center;
-  padding: 20px;
-  color: #fff;
-}
-
 section {
   opacity: 0;
   transform: translateY(50px);
@@ -95,3 +87,27 @@ section.show {
   opacity: 1;
   transform: translateY(0);
 }
+
+img {
+  transition: transform 0.5s;
+}
+
+img:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+<section id="mars-model">
+  <h2>3D модел на Марс</h2>
+  <iframe title="Mars 3D" frameborder="0" allowfullscreen
+    src="https://sketchfab.com/models/7w7f3b6b3/embed">
+  </iframe>
+</section>
+
+/* Футър */
+footer {
+  background: linear-gradient(90deg, #CC5500, #FF4500);
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
