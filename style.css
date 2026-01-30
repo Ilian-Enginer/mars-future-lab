@@ -56,6 +56,12 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+nav ul li a.active {
+  background-color: #FFD700;
+  color: #FF4500;
+  transform: scale(1.2);
+}
+
 /* Секции с различни нюанси на оранжево */
 section {
   padding: 60px 20px;
@@ -77,4 +83,15 @@ footer {
   text-align: center;
   padding: 20px;
   color: #fff;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s all ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
