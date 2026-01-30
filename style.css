@@ -8,20 +8,23 @@ body {
 }
 
 /* Хедър с фонова снимка */
-header .header-bg {
-  background-image: url('images/mars_header.jpg'); /* смени с твоята снимка */
-  background-size: cover;
-  background-position: center;
-  padding: 40px 0;
+.header-bg {
+  background-image: url('images/mars_header.jpg'); /* твоята снимка */
+  background-size: cover;       /* за да запълни целия хедър */
+  background-position: center;  /* центрира изображението */
+  padding: 100px 0;             /* височина на хедъра */
   text-align: center;
-  color: #fff;
+  color: #fff;                  /* цвят на текста */
+  position: relative;
+  text-shadow: 2px 2px 8px #000; /* за да се вижда текста върху снимката */
 }
 
-header h1 {
-  margin: 0;
+/* Стил на заглавието */
+.header-bg h1 {
   font-size: 3em;
-  text-shadow: 2px 2px 8px #000;
+  margin: 0;
 }
+
 
 /* Навигация */
 nav ul {
