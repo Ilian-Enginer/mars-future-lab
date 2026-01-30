@@ -11,7 +11,8 @@
   <!-- Хедър -->
   <header>
     <div class="header-bg">
-      <h1> Mars Future Lab</h1>
+      <h1 class="typing">🚀 Mars Future Lab</h1>
+      <div class="header-bar"></div>
       <nav>
         <ul>
           <li><a href="#science">Наука</a></li>
@@ -26,30 +27,63 @@
 
   <!-- Основно съдържание -->
   <main>
-    <section id="science">
-      <h2>Наука</h2>
-      <p>🌪 Прашни бури, атмосфера и температура на Марс – всичко интересно и забавно за нашата червена планета!</p>
+    <!-- Наука -->
+    <section id="science" class="split-section">
+      <div class="text-left">
+        <h2>🌪 Наука</h2>
+        <p>Прашни бури, атмосфера и температура на Марс – всичко интересно и забавно за нашата червена планета! 🪐</p>
+      </div>
+      <div class="image-right">
+        <img src="mars-duststorm.jpg" alt="Mars duststorm">
+      </div>
     </section>
 
-    <section id="technology">
-      <h2>Технологии</h2>
-      <p>🤖 Роботи, дронове и извличане на кислород от CO2 – как инженерите правят живота на Марс възможен.</p>
+    <!-- Технологии -->
+    <section id="technology" class="split-section reverse">
+      <div class="image-left">
+        <img src="mars-robot.jpg" alt="Mars robot">
+      </div>
+      <div class="text-right">
+        <h2>🤖 Технологии</h2>
+        <p>Роботи, дронове и извличане на кислород от CO2 – как инженерите правят живота на Марс възможен.</p>
+      </div>
     </section>
 
-    <section id="math">
-      <h2>Математика</h2>
-      <p>📊 Изчисление на ресурси и логистика – планиране на колонията, така че всичко да работи перфектно.</p>
+    <!-- Математика -->
+    <section id="math" class="split-section">
+      <div class="text-left">
+        <h2>📊 Математика</h2>
+        <p>Изчисление на ресурси и логистика – планиране на колонията, така че всичко да работи перфектно.</p>
+      </div>
+      <div class="image-right">
+        <img src="mars-math.jpg" alt="Mars calculation">
+      </div>
     </section>
 
-    <section id="model">
-  <h2>Нашият модел</h2>
-  <p>🛰️ Тук ще представим нашия 3D модел на колонията на Марс.</p>
-  <iframe src="https://sketchfab.com/models/your-model/embed" width="600" height="400" frameborder="0" allowfullscreen></iframe>
-</section>
+    <!-- Нашият модел -->
+    <section id="model" class="split-section reverse">
+      <div class="image-left">
+        <!-- Място за 3D модел -->
+        <iframe title="Mars 3D Model" frameborder="0" allowfullscreen
+          src="https://sketchfab.com/models/7w7f3b6b3/embed"
+          width="100%" height="400px">
+        </iframe>
+      </div>
+      <div class="text-right">
+        <h2>🛰️ Нашият модел</h2>
+        <p>Виж нашата 3D колония на Марс – можеш да я въртиш и разглеждаш отвсякъде!</p>
+      </div>
+    </section>
 
-    <section id="about">
-      <h2>За нас</h2>
-      <p>🌌 Ние сме двама приятели на 13 години от Шумен, ученици в СУ „Сава Доброплодни“. Обичаме информатика и технологии и мечтаем за колонии на Марс! 🚀</p>
+    <!-- За нас -->
+    <section id="about" class="split-section">
+      <div class="text-left">
+        <h2>🌌 За нас</h2>
+        <p>Ние сме двама приятели на 13 години от Шумен, ученици в СУ „Сава Доброплодни“. Обичаме информатика и технологии и мечтаем за колонии на Марс! 🚀</p>
+      </div>
+      <div class="image-right">
+        <img src="team.jpg" alt="Team">
+      </div>
     </section>
   </main>
 
@@ -58,41 +92,40 @@
     <p>© 2026 Mars Future Lab</p>
   </footer>
 
+  <!-- Скриптове за анимации и навигация -->
+  <script>
+    // Sticky highlight на менюто
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if(pageYOffset >= sectionTop - 80) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if(link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+
+    // Анимации при скрол
+    const splitSections = document.querySelectorAll('.split-section');
+    window.addEventListener('scroll', () => {
+      splitSections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight / 1.3;
+        if(sectionTop < screenHeight) {
+          section.classList.add('show');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
-
-<script>
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav ul li a");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if(pageYOffset >= sectionTop - 60) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove("active");
-    if(link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
-});
-</script>
-
-<script>
-const sectionsAnim = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-  sectionsAnim.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    const screenHeight = window.innerHeight / 1.3;
-    if(sectionTop < screenHeight) {
-      section.classList.add("show");
-    }
-  });
-});
-</script>
