@@ -1,30 +1,34 @@
-/* Основен цвят на сайта */
+/* Основен фон на сайта */
 body {
   font-family: Arial, sans-serif;
-  background-color: #1a1a1a; /* тъмен фон */
-  color: #f2f2f2; /* светъл текст */
+  background-color: #FF7518; /* оранжев Марс фон */
+  color: #fff;
   margin: 0;
   padding: 0;
 }
 
-/* Хедър с фонова снимка */
+/* Хедър с различен оранжев нюанс */
 .header-bg {
-  background-image: url('images/mars_header.jpg'); /* твоята снимка */
-  background-size: cover;       /* за да запълни целия хедър */
-  background-position: center;  /* центрира изображението */
-  padding: 100px 0;             /* височина на хедъра */
+  background-color: #FF4500; /* по-тъмен оранжев за хедъра */
+  padding: 50px 0;
   text-align: center;
-  color: #fff;                  /* цвят на текста */
   position: relative;
-  text-shadow: 2px 2px 8px #000; /* за да се вижда текста върху снимката */
 }
 
-/* Стил на заглавието */
+/* Заглавие */
 .header-bg h1 {
-  font-size: 3em;
   margin: 0;
+  font-size: 3em;
 }
 
+/* Малката лента под заглавието */
+.header-bar {
+  width: 120px;       /* дължина на лентата */
+  height: 6px;        /* дебелина */
+  background-color: #FFA500; /* по-светъл оранжев */
+  margin: 10px auto;  /* центриране под текста */
+  border-radius: 3px;
+}
 
 /* Навигация */
 nav ul {
@@ -38,7 +42,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #ffd700; /* златен цвят на бутоните */
+  color: #FFD700; /* златен цвят за бутоните */
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 8px;
@@ -46,7 +50,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #ff4500; /* оранжев ефект при мишка */
+  background-color: #FF8C00; /* оранжев ефект при hover */
   color: #fff;
 }
 
@@ -54,6 +58,11 @@ nav ul li a:hover {
 section {
   padding: 60px 20px;
   text-align: center;
+  background-color: #FF8C00; /* различен оранжев за секциите */
+}
+
+section:nth-child(even) {
+  background-color: #FF9933; /* друг нюанс за редуване */
 }
 
 section img {
@@ -61,13 +70,13 @@ section img {
   height: auto;
   margin-top: 20px;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 /* Футър */
 footer {
-  background-color: #111;
+  background-color: #CC5500; /* тъмен оранжев за футъра */
   text-align: center;
   padding: 20px;
-  color: #aaa;
+  color: #fff;
 }
