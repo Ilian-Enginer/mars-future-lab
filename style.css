@@ -1,31 +1,44 @@
 /* Основен фон на сайта */
 body {
   font-family: Arial, sans-serif;
-  background-color: #FF7518; /* светъл оранжев */
+  background-color: #FF7518;
   color: #fff;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
-/* Хедър с тъмен оранжев нюанс */
+/* Хедър */
 .header-bg {
-  background-color: #FF4500; /* тъмен оранжев */
+  background-color: #FF4500;
   padding: 50px 0;
   text-align: center;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Заглавие */
 .header-bg h1 {
   margin: 0;
   font-size: 3em;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #FFD700;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
 }
 
-/* Малката лента под заглавието */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
 .header-bar {
   width: 120px;
   height: 6px;
-  background-color: #FFA500; /* светъл оранжев */
+  background-color: #FFA500;
   margin: 10px auto;
   border-radius: 3px;
 }
@@ -42,66 +55,65 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #FFD700; /* златни бутони */
+  color: #FFD700;
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 8px;
   transition: 0.3s;
 }
 
-nav ul li a:hover {
-  background-color: #FF8C00;
-  color: #fff;
-  transform: scale(1.1);
-  text-decoration: underline;
-}
-
+nav ul li a:hover,
 nav ul li a.active {
   background-color: #FFD700;
   color: #FF4500;
   transform: scale(1.2);
 }
 
-/* Секции с различни нюанси на оранжево */
-section {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: rgba(255, 140, 0, 0.9);
-  background-image: url('mars-bg.jpg'); /* сложи картинка на Марс в папката */
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-}
-
-section:nth-child(even) {
-  background-color: #FF9933; /* различен нюанс за редуване */
-}
-
-section {
+/* Секции – редуване текст/снимка */
+.split-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  gap: 20px;
   opacity: 0;
   transform: translateY(50px);
-  transition: 1s all ease;
+  transition: 1s ease;
 }
 
-section.show {
+.split-section.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-img {
+.split-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-left, .text-right {
+  width: 50%;
+}
+
+.text-left h2, .text-right h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.text-left p, .text-right p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Снимки */
+.split-section img {
+  width: 45%;
+  border-radius: 15px;
   transition: transform 0.5s;
 }
 
-img:hover {
-  transform: scale(1.2) rotate(5deg);
+.split-section img:hover {
+  transform: scale(1.05) rotate(2deg);
 }
-
-<section id="mars-model">
-  <h2>3D модел на Марс</h2>
-  <iframe title="Mars 3D" frameborder="0" allowfullscreen
-    src="https://sketchfab.com/models/7w7f3b6b3/embed">
-  </iframe>
-</section>
 
 /* Футър */
 footer {
@@ -110,4 +122,3 @@ footer {
   padding: 20px;
   color: #fff;
 }
-
