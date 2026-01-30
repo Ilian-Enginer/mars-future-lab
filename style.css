@@ -50,15 +50,21 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #FF8C00; /* hover ефект */
+  background-color: #FF8C00;
   color: #fff;
+  transform: scale(1.1);
+  text-decoration: underline;
 }
 
 /* Секции с различни нюанси на оранжево */
 section {
   padding: 60px 20px;
   text-align: center;
-  background-color: #FF8C00; /* основен оранжев за секциите */
+  background-color: rgba(255, 140, 0, 0.9);
+  background-image: url('mars-bg.jpg'); /* сложи картинка на Марс в папката */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
 
 section:nth-child(even) {
@@ -67,7 +73,7 @@ section:nth-child(even) {
 
 /* Футър */
 footer {
-  background-color: #CC5500; /* тъмен оранжев за футъра */
+  background: linear-gradient(90deg, #CC5500, #FF4500);
   text-align: center;
   padding: 20px;
   color: #fff;
