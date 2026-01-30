@@ -1,47 +1,32 @@
 /* Основен фон на сайта */
 body {
   font-family: Arial, sans-serif;
+  background-color: #FF7518; /* светъл оранжев */
+  color: #fff;
   margin: 0;
   padding: 0;
-  background-color: #FF8C33; /* светъл оранжев за основните секции */
-  color: #fff;
 }
 
-/* Хедър */
+/* Хедър с тъмен оранжев нюанс */
 .header-bg {
-  position: relative;
+  background-color: #FF4500; /* тъмен оранжев */
+  padding: 50px 0;
   text-align: center;
-  color: #fff;
+  position: relative;
 }
 
-/* Снимка в хедъра */
-.header-bg .header-image {
-  width: 100%;
-  height: 300px;          /* височина на хедъра */
-  object-fit: cover;      /* да се мащабира правилно */
-  display: block;
-}
-
-/* Текст върху снимката */
+/* Заглавие */
 .header-bg h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3em;
-  text-shadow: 2px 2px 8px #000;
   margin: 0;
+  font-size: 3em;
 }
 
-/* Малката оранжева лента под текста */
+/* Малката лента под заглавието */
 .header-bar {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translateX(-50%);
   width: 120px;
   height: 6px;
-  background-color: #FFA500;
+  background-color: #FFA500; /* светъл оранжев */
+  margin: 10px auto;
   border-radius: 3px;
 }
 
@@ -53,13 +38,11 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 20px;
-  position: relative;
-  top: 10px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #FFD700;
+  color: #FFD700; /* златни бутони */
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 8px;
@@ -67,48 +50,25 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #FF4500;
+  background-color: #FF8C00; /* hover ефект */
   color: #fff;
 }
 
-/* Основни секции */
-main section {
+/* Секции с различни нюанси на оранжево */
+section {
   padding: 60px 20px;
   text-align: center;
-  background-color: #FF8C33;
+  background-color: #FF8C00; /* основен оранжев за секциите */
+}
+
+section:nth-child(even) {
+  background-color: #FF9933; /* различен нюанс за редуване */
 }
 
 /* Футър */
 footer {
-  background-color: #FF8C33;
+  background-color: #CC5500; /* тъмен оранжев за футъра */
   text-align: center;
   padding: 20px;
   color: #fff;
-}
-
-/* Контейнер за малкия текст и картинка над основния заглавен текст */
-.header-top-decoration {
-  position: absolute;
-  top: 10%;           /* малко над основния h1 */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  z-index: 2;         /* за да е над снимката */
-}
-
-/* Малката картинка (лист хартия) */
-.header-top-decoration .paper-icon {
-  width: 24px;
-  height: 24px;
-  transform: rotate(-10deg); /* леко наклонена/намачкана */
-}
-
-/* Малък текст „Mars“ */
-.header-top-decoration .small-text {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #FFD700; /* златисто */
-  text-shadow: 1px 1px 4px #000;
 }
