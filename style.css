@@ -13,100 +13,90 @@ body {
 }
 
 /* ===== HEADER ===== */
-.header-bg {
+.header {
   text-align: center;
   padding: 40px 20px;
 }
 
 .typing {
   font-size: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
-/* ===== NAV ===== */
-nav ul {
-  list-style: none;
+/* ===== NAV BUTTONS ===== */
+nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+nav button {
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  background: #ffcc00;
+  color: #000;
   font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s;
 }
 
-nav a:hover {
-  text-decoration: underline;
+nav button:hover {
+  background: #ffd633;
+  transform: translateY(-2px);
 }
 
 /* ===== SECTIONS ===== */
-main section {
-  display: none; /* важно за бутоните */
+.section {
+  display: none;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: rgba(0,0,0,0.18);
+  border-radius: 18px;
+  padding: 50px;
 }
 
-.split-section {
+/* ===== CONTENT LAYOUT ===== */
+.content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 40px;
-  padding: 60px 10%;
-  background: rgba(0, 0, 0, 0.15);
-  margin: 40px auto;
-  border-radius: 16px;
-  max-width: 1100px;
 }
 
-.split-section.reverse {
-  flex-direction: row-reverse;
+.content img {
+  width: 45%;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
 }
 
 /* ===== TEXT ===== */
-.text-left,
-.text-right {
-  flex: 1;
-}
-
-.split-section h2 {
+.content h2 {
   font-size: 32px;
   margin-bottom: 15px;
 }
 
-.split-section p {
+.content p {
   font-size: 18px;
   line-height: 1.6;
 }
 
-/* ===== IMAGES ===== */
-.image-left,
-.image-right {
-  flex: 1;
-  text-align: center;
-}
-
-.image-left img,
-.image-right img {
-  max-width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
-}
-
-/* ===== BUTTON ===== */
-button {
+/* ===== ACTION BUTTON ===== */
+.action {
   margin-top: 20px;
-  padding: 12px 24px;
+  padding: 12px 26px;
   font-size: 16px;
-  border: none;
   border-radius: 30px;
-  background: #ffcc00;
+  border: none;
+  background: #00ffd5;
   color: #000;
-  cursor: pointer;
   font-weight: bold;
+  cursor: pointer;
 }
 
-button:hover {
-  background: #ffd633;
+.action:hover {
+  background: #33ffe0;
 }
 
 /* ===== FOOTER ===== */
@@ -118,9 +108,12 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  .split-section,
-  .split-section.reverse {
+  .content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .content img {
+    width: 100%;
   }
 }
