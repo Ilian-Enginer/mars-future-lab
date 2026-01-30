@@ -98,4 +98,35 @@ nav button:hover {
   margin-top: 20px;
   padding: 12px 26px;
   font-size: 16px;
-  bo
+  border-radius: 30px;
+  border: none;
+  background: #00ffd5;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action:hover {
+  background: #33ffe0;
+  transform: translateY(-2px);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content img {
+    width: 100%;
+  }
+}
