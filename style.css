@@ -1,13 +1,13 @@
 /* Основен фон на сайта */
 body {
   font-family: Arial, sans-serif;
-  background-color: #FF7518; /* оранжев Марс фон */
+  background-color: #FF7518; /* светъл оранжев за основата */
   color: #fff;
   margin: 0;
   padding: 0;
 }
 
-/* Хедър с различен оранжев нюанс */
+/* Хедър с тъмен оранжев нюанс */
 .header-bg {
   background-color: #FF4500; /* по-тъмен оранжев за хедъра */
   padding: 50px 0;
@@ -21,12 +21,12 @@ body {
   font-size: 3em;
 }
 
-/* Малката лента под заглавието */
+/* Малка лента под заглавието */
 .header-bar {
-  width: 120px;       /* дължина на лентата */
-  height: 6px;        /* дебелина */
+  width: 120px;
+  height: 6px;
   background-color: #FFA500; /* по-светъл оранжев */
-  margin: 10px auto;  /* центриране под текста */
+  margin: 10px auto;
   border-radius: 3px;
 }
 
@@ -42,7 +42,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #FFD700; /* златен цвят за бутоните */
+  color: #FFD700; /* златен цвят на бутоните */
   font-weight: bold;
   padding: 8px 16px;
   border-radius: 8px;
@@ -54,23 +54,15 @@ nav ul li a:hover {
   color: #fff;
 }
 
-/* Секции */
+/* Секции с различни нюанси оранжево */
 section {
   padding: 60px 20px;
   text-align: center;
-  background-color: #FF8C00; /* различен оранжев за секциите */
+  background-color: #FF8C00; /* оранжев за секциите */
 }
 
 section:nth-child(even) {
   background-color: #FF9933; /* друг нюанс за редуване */
-}
-
-section img {
-  max-width: 80%;
-  height: auto;
-  margin-top: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 /* Футър */
