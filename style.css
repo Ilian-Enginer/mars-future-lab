@@ -40,7 +40,7 @@ nav button {
   color: #000;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.25s;
+  transition: all 0.3s ease;
 }
 
 nav button:hover {
@@ -50,24 +50,23 @@ nav button:hover {
 
 /* ===== SECTIONS ===== */
 .section {
-  display: none; /* секциите по подразбиране са скрити */
   max-width: 1100px;
   margin: 40px auto;
   background: rgba(0,0,0,0.18);
   border-radius: 18px;
   padding: 50px;
 
-  /* анимация за slide-in */
   opacity: 0;
-  transform: translateX(50px); /* отдясно леко */
+  max-height: 0;     /* вместо display:none */
+  overflow: hidden;
+  transform: translateX(50px);
   transition: all 0.5s ease;
 }
 
-/* активна секция с плавно показване */
 .section.active {
-  display: block;
   opacity: 1;
-  transform: translateX(0); /* на място */
+  max-height: 2000px;  /* достатъчна височина за съдържанието */
+  transform: translateX(0);
 }
 
 /* ===== CONTENT LAYOUT ===== */
@@ -99,33 +98,4 @@ nav button:hover {
   margin-top: 20px;
   padding: 12px 26px;
   font-size: 16px;
-  border-radius: 30px;
-  border: none;
-  background: #00ffd5;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.action:hover {
-  background: #33ffe0;
-}
-
-/* ===== FOOTER ===== */
-footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.8;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .content img {
-    width: 100%;
-  }
-}
+  bo
