@@ -82,3 +82,17 @@ window.addEventListener("scroll", () => {
   });
 });
 </script>
+
+<script>
+const sectionsAnim = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sectionsAnim.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight / 1.3;
+    if(sectionTop < screenHeight) {
+      section.classList.add("show");
+    }
+  });
+});
+</script>
