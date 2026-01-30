@@ -85,3 +85,30 @@ footer {
   padding: 20px;
   color: #fff;
 }
+
+/* Контейнер за малкия текст и картинка над основния заглавен текст */
+.header-top-decoration {
+  position: absolute;
+  top: 10%;           /* малко над основния h1 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;         /* за да е над снимката */
+}
+
+/* Малката картинка (лист хартия) */
+.header-top-decoration .paper-icon {
+  width: 24px;
+  height: 24px;
+  transform: rotate(-10deg); /* леко наклонена/намачкана */
+}
+
+/* Малък текст „Mars“ */
+.header-top-decoration .small-text {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #FFD700; /* златисто */
+  text-shadow: 1px 1px 4px #000;
+}
