@@ -12,7 +12,6 @@
   <header>
     <div class="header-bg">
       <h1 class="typing">🚀 Mars Future Lab</h1>
-      <div class="header-bar"></div>
       <nav>
         <ul>
           <li><a href="#" onclick="showSection('science')">Наука</a></li>
