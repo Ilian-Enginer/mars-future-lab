@@ -7,7 +7,7 @@
 
 /* ===== BODY ===== */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Verdana, sans-serif;
   background: linear-gradient(180deg, #ff8c33, #ff6a00);
   color: white;
 }
@@ -48,28 +48,38 @@ nav button:hover {
   transform: translateY(-2px);
 }
 
-/* ===== SECTIONS ===== */
-.section {
+/* ===== MAIN CONTAINER ===== */
+.main-container {
+  position: relative;
   max-width: 1100px;
   margin: 40px auto;
+  min-height: 700px;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
   background: rgba(0,0,0,0.18);
   border-radius: 18px;
   padding: 50px;
 
   opacity: 0;
-  max-height: 0;     /* вместо display:none */
-  overflow: hidden;
   transform: translateX(50px);
   transition: all 0.5s ease;
+  pointer-events: none;
 }
 
 .section.active {
   opacity: 1;
-  max-height: 2000px;  /* достатъчна височина за съдържанието */
   transform: translateX(0);
+  pointer-events: auto;
 }
 
-/* ===== CONTENT LAYOUT ===== */
+/* ===== CONTENT ===== */
 .content {
   display: flex;
   align-items: center;
@@ -93,23 +103,16 @@ nav button:hover {
   line-height: 1.6;
 }
 
-/* ===== ACTION BUTTON ===== */
-.action {
-  margin-top: 20px;
-  padding: 12px 26px;
-  font-size: 16px;
-  border-radius: 30px;
-  border: none;
-  background: #00ffd5;
-  color: #000;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
+/* ===== GAMES ===== */
+.game-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 60px;
 }
 
-.action:hover {
-  background: #33ffe0;
-  transform: translateY(-2px);
+.game-text {
+  max-width: 500px;
 }
 
 /* ===== FOOTER ===== */
@@ -121,12 +124,12 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  .content {
+  .content, .game-block {
     flex-direction: column;
     text-align: center;
   }
 
-  .content img {
+  .content img, .game-block iframe {
     width: 100%;
   }
 }
