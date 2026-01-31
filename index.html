@@ -1,100 +1,108 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mars Future Lab</title>
-<style>
-/* ===== RESET ===== */
-* { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
-body { background: linear-gradient(180deg,#ff8c33,#ff6a00); color:white; line-height:1.6; }
-
-/* ===== HEADER ===== */
-header { text-align:center; padding:40px 20px; }
-header h1 { font-size:48px; margin-bottom:10px; }
-nav { display:flex; justify-content:center; gap:10px; margin-top:15px; }
-nav a { text-decoration:none; padding:8px 20px; background:#ffcc00; color:#000; border-radius:20px; font-weight:bold; transition:0.3s; }
-nav a:hover { background:#ffd633; transform:translateY(-2px); }
-
-/* ===== SECTIONS ===== */
-section { max-width:900px; margin:40px auto; padding:30px; background:rgba(0,0,0,0.25); border-radius:15px; opacity:0; transform:translateY(30px); transition:0.6s; }
-section.active { opacity:1; transform:translateY(0); }
-section img { width:100%; border-radius:10px; margin-top:15px; }
-
-/* ===== BUTTON ===== */
-button { padding:10px 20px; font-size:16px; border:none; border-radius:20px; background:#00ffd5; color:#000; cursor:pointer; font-weight:bold; transition:0.3s; }
-button:hover { background:#33ffe0; transform:translateY(-2px); }
-
-/* ===== FOOTER ===== */
-footer { text-align:center; padding:20px; opacity:0.8; }
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:700px){ nav { flex-direction:column; gap:8px; } }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mars Future Lab</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>🚀 Mars Future Lab</h1>
-  <nav>
-    <a href="#intro">Начало</a>
-    <a href="#science">Наука</a>
-    <a href="#math-tech">Математика и технологии</a>
-    <a href="#games">Игри</a>
-    <a href="#model">Нашият модел</a>
-    <a href="#about">За нас</a>
-  </nav>
-</header>
-
-<section id="intro" class="active">
-  <h2>Добре дошли!</h2>
-  <p>Проект за колонизация на Марс, създаден от ученици от 7. клас. Наука, технологии и математика в действие, за да покажем как хората могат да живеят на Червената планета.</p>
-  <img src="images/mars_intro.jpg" alt="Марс">
+<!-- Sidebar -->
+<section id="sidebar">
+  <div class="inner">
+    <nav>
+      <ul>
+        <li><a href="#intro">Начало</a></li>
+        <li><a href="#science">Наука</a></li>
+        <li><a href="#tech">Математика и технологии</a></li>
+        <li><a href="#games">Игри</a></li>
+        <li><a href="#model">Нашият модел</a></li>
+        <li><a href="#about">За нас</a></li>
+      </ul>
+    </nav>
+  </div>
 </section>
 
-<section id="science">
-  <h2>Наука</h2>
-  <p>Марс е една от най-вълнуващите и предизвикателни планети в Слънчевата система. Изследваме атмосферата, температурите и прашните бури, за да разберем как хората могат да оцелеят и да създадат безопасни колонии.</p>
-  <img src="images/science.jpg" alt="Наука">
-</section>
+<!-- Wrapper -->
+<div id="wrapper">
 
-<section id="math-tech">
-  <h2>Математика и технологии</h2>
-  <p>С помощта на математика изчисляваме нужните ресурси – храна, вода, кислород и енергия. Технологиите като роботи и дронове помагат да строим инфраструктурата на колонията и да осигуряваме жизнената среда за хората.</p>
-  <img src="images/tech.jpg" alt="Технологии">
-</section>
+  <!-- Intro -->
+  <section id="intro" class="wrapper fullscreen">
+    <div class="inner">
+      <h1 class="fade-in">🚀 Mars Future Lab</h1>
+      <p class="fade-in">Проект за колонизация на Марс, създаден от ученици от 7. клас.</p>
+      <div class="planet-container">
+        <img src="images/mars.png" alt="Марс" class="planet">
+      </div>
+      <a href="#science" class="button scrolly fade-in">Вижте още</a>
+    </div>
+  </section>
 
-<section id="games">
-  <h2>Игри</h2>
-  <p>Малка интерактивна игра: управлявай своя марсианска колония. Строй куполи, събирай ресурси и развивай базата си. Целта е да разбереш как ежедневието на Марс би изглеждало и как науката помага в реалния живот.</p>
-</section>
+  <!-- Наука -->
+  <section id="science" class="wrapper section">
+    <div class="inner fade-in">
+      <h2>Наука</h2>
+      <p>Изучаваме атмосферата, радиацията и условията за живот на Марс. Всяко откритие ни приближава към колонизацията.</p>
+      <img src="images/science.jpg" alt="Наука" class="section-image">
+    </div>
+  </section>
 
-<section id="model">
-  <h2>Нашият модел</h2>
-  <p>Представяме нашия модел на бъдеща марсианска колония – куполи за живеене, соларни панели и защитени зони. Това е нашата визуализация как хората биха могли да живеят безопасно и устойчиво на Марс.</p>
-  <img src="images/model.jpg" alt="Модел">
-</section>
+  <!-- Математика и технологии -->
+  <section id="tech" class="wrapper section">
+    <div class="inner fade-in">
+      <h2>Математика и технологии</h2>
+      <p>Изчисляваме ресурси, строим роботове и системи за кислород. Математика + технологии = успешна мисия!</p>
+      <img src="images/tech.jpg" alt="Технологии" class="section-image">
+    </div>
+  </section>
 
-<section id="about">
-  <h2>За нас</h2>
-  <p>Здравейте! Ние сме Илиян и Едис, ученици от 7. клас в Шумен. Обичаме да учим, изследваме и създаваме STEM проекти. Нашата цел е да покажем как науката, математиката и технологиите могат да направят мечтата за колонизация на Марс реалност.</p>
-</section>
+  <!-- Игри -->
+  <section id="games" class="wrapper section">
+    <div class="inner fade-in">
+      <h2>Игри</h2>
+      <p>Малки интерактивни мисии: събирай ресурси и управлявай колонията!</p>
+      <iframe src="https://scratch.mit.edu/projects/1255210240/embed" width="480" height="402" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </section>
+
+  <!-- Нашият модел -->
+  <section id="model" class="wrapper section">
+    <div class="inner fade-in">
+      <h2>Нашият модел</h2>
+      <p>Показваме нашата идея за куполи, соларни панели и защитени зони на Марс.</p>
+      <img src="images/model.jpg" alt="Модел" class="section-image-small">
+    </div>
+  </section>
+
+  <!-- За нас -->
+  <section id="about" class="wrapper section">
+    <div class="inner fade-in">
+      <h2>За нас</h2>
+      <p>Илиян и Едис – ученици от 7. клас, обичаме науката и мечтаем за Марс.</p>
+      <img src="images/team.jpg" alt="Екип" class="section-image-small">
+    </div>
+  </section>
+
+</div>
 
 <footer>
   © 2026 Mars Future Lab
 </footer>
 
 <script>
-// Скрипт за показване на секциите при клик на менюто
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
-    target.classList.add('active');
-    window.scrollTo({ top:0, behavior:'smooth' });
-  });
-});
+  // Fade-in при скрол
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.3, rootMargin: "0px 0px -50px 0px" };
+  const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+      if(!entry.isIntersecting) return;
+      entry.classList.add('appear');
+      observer.unobserve(entry);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => { appearOnScroll.observe(fader); });
 </script>
 
 </body>
