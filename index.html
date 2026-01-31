@@ -1,141 +1,99 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mars Future Lab</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mars Future Lab</title>
+<style>
+/* ===== RESET ===== */
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
+body { background: linear-gradient(180deg,#ff8c33,#ff6a00); color:white; line-height:1.6; }
+
+/* ===== HEADER ===== */
+header { text-align:center; padding:40px 20px; }
+header h1 { font-size:48px; margin-bottom:10px; }
+nav { display:flex; justify-content:center; gap:10px; margin-top:15px; }
+nav a { text-decoration:none; padding:8px 20px; background:#ffcc00; color:#000; border-radius:20px; font-weight:bold; transition:0.3s; }
+nav a:hover { background:#ffd633; transform:translateY(-2px); }
+
+/* ===== SECTIONS ===== */
+section { max-width:900px; margin:40px auto; padding:30px; background:rgba(0,0,0,0.25); border-radius:15px; opacity:0; transform:translateY(30px); transition:0.6s; }
+section.active { opacity:1; transform:translateY(0); }
+section img { width:100%; border-radius:10px; margin-top:15px; }
+
+/* ===== BUTTON ===== */
+button { padding:10px 20px; font-size:16px; border:none; border-radius:20px; background:#00ffd5; color:#000; cursor:pointer; font-weight:bold; transition:0.3s; }
+button:hover { background:#33ffe0; transform:translateY(-2px); }
+
+/* ===== FOOTER ===== */
+footer { text-align:center; padding:20px; opacity:0.8; }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:700px){ nav { flex-direction:column; gap:8px; } }
+</style>
 </head>
 <body>
 
-<header class="header">
-  <h1 class="typing">🚀 Mars Future Lab</h1>
+<header>
+  <h1>🚀 Mars Future Lab</h1>
   <nav>
-    <button onclick="showSection('science')">Наука</button>
-    <button onclick="showSection('technology')">Технологии</button>
-    <button onclick="showSection('math')">Математика</button>
-    <button onclick="showSection('model')">Нашият модел</button>
-    <button onclick="showSection('game')">Игри</button>
-    <button onclick="showSection('about')">За нас</button>
+    <a href="#intro">Начало</a>
+    <a href="#science">Наука</a>
+    <a href="#math-tech">Математика и технологии</a>
+    <a href="#games">Игри</a>
+    <a href="#model">Нашият модел</a>
+    <a href="#about">За нас</a>
   </nav>
 </header>
 
-<main class="main-container">
+<section id="intro" class="active">
+  <h2>Добре дошли!</h2>
+  <p>Проект за колонизация на Марс, създаден от ученици от 7. клас. Наука, технологии и математика в действие, за да покажем как хората могат да живеят на Червената планета.</p>
+  <img src="images/mars_intro.jpg" alt="Марс">
+</section>
 
-  <section id="science" class="section">
-    <div class="content">
-      <img src="images/shutterstock_2414213287.jpg" alt="Марс">
-      <div>
-        <h2>🌪 Наука</h2>
-        <p>
-          Марс е една от най-вълнуващите, но и предизвикателни планети в Слънчевата система. Със своята тънка атмосфера, екстремни температури и чести прашни бури, той поставя нови граници за човешкото оцеляване.
-          Нашият екип изучава как хората могат да се адаптират към тези сурови условия. Разглеждаме фактори като атмосферното налягане, радиацията, липсата на течна вода и ограничения достъп до хранителни ресурси.
-        </p>
-      </div>
-    </div>
-  </section>
+<section id="science">
+  <h2>Наука</h2>
+  <p>Марс е една от най-вълнуващите и предизвикателни планети в Слънчевата система. Изследваме атмосферата, температурите и прашните бури, за да разберем как хората могат да оцелеят и да създадат безопасни колонии.</p>
+  <img src="images/science.jpg" alt="Наука">
+</section>
 
-  <section id="technology" class="section">
-    <div class="content">
-      <img src="tech.jpg" alt="Технологии">
-      <div>
-        <h2>🤖 Технологии</h2>
-        <p>
-          Роботи, дронове и машини произвеждат кислород от CO₂ и помагат при строежа
-          на първите марсиански колонии.
-        </p>
-      </div>
-    </div>
-  </section>
+<section id="math-tech">
+  <h2>Математика и технологии</h2>
+  <p>С помощта на математика изчисляваме нужните ресурси – храна, вода, кислород и енергия. Технологиите като роботи и дронове помагат да строим инфраструктурата на колонията и да осигуряваме жизнената среда за хората.</p>
+  <img src="images/tech.jpg" alt="Технологии">
+</section>
 
-  <section id="math" class="section">
-    <div class="content">
-      <img src="math.jpg" alt="Математика">
-      <div>
-        <h2>📊 Математика</h2>
-        <p>
-          
-        </p>
-      </div>
-    </div>
-  </section>
+<section id="games">
+  <h2>Игри</h2>
+  <p>Малка интерактивна игра: управлявай своя марсианска колония. Строй куполи, събирай ресурси и развивай базата си. Целта е да разбереш как ежедневието на Марс би изглеждало и как науката помага в реалния живот.</p>
+</section>
 
-  <section id="model" class="section">
-    <div class="content">
-      <img src="model.jpg" alt="Нашият модел">
-      <div>
-        <h2>🛰 Нашият модел</h2>
-        <p>
-          Това е нашата идея за бъдеща марсианска колония – куполи,
-          соларни панели и защитени зони.
-        </p>
-      </div>
-    </div>
-  </section>
+<section id="model">
+  <h2>Нашият модел</h2>
+  <p>Представяме нашия модел на бъдеща марсианска колония – куполи за живеене, соларни панели и защитени зони. Това е нашата визуализация как хората биха могли да живеят безопасно и устойчиво на Марс.</p>
+  <img src="images/model.jpg" alt="Модел">
+</section>
 
-  <section id="game" class="section">
-    <h2 style="text-align:center; font-family:Verdana, sans-serif;">🎮 Игри</h2>
-    <p style="text-align:center; font-family:Verdana, sans-serif; font-size:18px; margin-bottom:40px;">
-      Малка интерактивна идея: <strong>Колонизация на Марс</strong>
-    </p>
-
-    <!-- Игра 1 -->
-    <div class="game-block">
-      <iframe src="https://scratch.mit.edu/projects/1255210240/embed" allowtransparency="true" width="480" height="402" frameborder="0" scrolling="no"></iframe>
-      <div class="game-text">
-        <h3>🎮 Игра 1</h3>
-        <p>
-          Създай своя колония на Марс, събирай <strong>XP и пари</strong> и развивай базата си.  
-          Строй нови куполи, усъвършенствай инфраструктурата и управлявай ресурсите.  
-          Това е малка интерактивна идея как би изглеждало управлението на истинска марсианска колония.
-        </p>
-        <p><a href="https://scratch.mit.edu/projects/1255210240/fullscreen/" target="_blank">Играйте на цял екран</a></p>
-      </div>
-    </div>
-
-    <!-- Игра 2 -->
-    <div class="game-block">
-      <iframe src="https://trinket.io/embed/python/b56bf366b747" allowtransparency="true" width="600" height="450" frameborder="0" scrolling="no"></iframe>
-      <div class="game-text">
-        <h3>🎮 Игра 2</h3>
-        <p>
-          Ново приключение на Марс! Развивай колонията и събирай ресурси.  
-          За да играете пълноценно, използвайте бутона за цял екран.
-        </p>
-        <p><a href="https://trinket.io/python/b56bf366b747" target="_blank">Играйте на цял екран</a></p>
-      </div>
-    </div>
-
-  </section>
-
-  <section id="about" class="section">
-    <div class="content">
-      <img src="team.jpg" alt="Екип">
-      <div>
-        <h2>🌌 За нас</h2>
-        <p>
-          Здравейте! Аз съм Илиян Борисов, на 13 години от Шумен, ученик в СУ "Сава Доброплодни", 7б клас, паралелка Информационни технологии и математика.
-          Работя в екип с моят приятел Едис Хюсеин и заедно обичаме да учим, изследваме и създаваме проекти, свързани с космоса и технологиите.
-          Проектът "Колонизация на Марс" е нашият първи опит да съчетаем знания, идеи и творчество в един интерактивен уебсайт.
-        </p>
-      </div>
-    </div>
-  </section>
-
-</main>
+<section id="about">
+  <h2>За нас</h2>
+  <p>Здравейте! Ние сме Илиян и Едис, ученици от 7. клас в Шумен. Обичаме да учим, изследваме и създаваме STEM проекти. Нашата цел е да покажем как науката, математиката и технологиите могат да направят мечтата за колонизация на Марс реалност.</p>
+</section>
 
 <footer>
+  © 2026 Mars Future Lab
 </footer>
 
 <script>
-function showSection(id) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  // Показваме началната секция "Наука"
-  showSection('science');
+// Скрипт за показване на секциите при клик на менюто
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    target.classList.add('active');
+    window.scrollTo({ top:0, behavior:'smooth' });
+  });
 });
 </script>
 
